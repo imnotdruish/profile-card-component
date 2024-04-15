@@ -1,0 +1,137 @@
+/* Base & Variables */
+:root {
+
+  --clr-primary: hsl(185, 75%, 39%);
+  --clr-primary-dark: hsl(229, 23%, 23%);
+  --clr-accent: hsl(227, 10%, 46%);
+
+  --clr-neutral: hsl(0, 0%, 59%);
+
+  --fs-400: 1rem;
+  --fs-base: 1.125rem;
+  --fs-600: 1.25rem;
+  --fs-700: 1.5rem;
+  --fs-800: 1.75rem;
+  --fs-900: 2rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --ff-default: 'Kumbh Sans', sans-serif;
+
+  --bottom-bg: url("images/bg-pattern-bottom.svg");
+  --card-bg: url("images/bg-pattern-card.svg");
+  --top-bg: url("images/bg-pattern-top.svg");
+
+  --body-bg: var(--bottom-bg), var(--top-bg), var(--clr-primary);
+
+/* 
+  <img class="top__left" src="images/bg-pattern-top.svg" aria-hidden="true" />
+  <img class="bottom__right" src="images/bg-pattern-bottom.svg" aria-hidden="true" /> 
+*/
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+/* Main Site */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--body-bg);
+  background-repeat: no-repeat; 
+  background-position: bottom -5vh right -50vw , top -10vh left -50vw;
+  font-family: var(--ff-default);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg), white;
+  background-repeat: no-repeat;
+  background-position: top center;
+  border-radius: 1rem;
+  min-width: 350px;
+  min-height: 400px;
+  padding: 1rem;
+}
+
+.profile__user {
+  position: relative;
+}
+
+.profile__pic {
+  width: 100px;
+  border: 5px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile__user {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.profile__name__and__age {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__name__and__age h1 {
+  font-size: var(--fs-500);
+  color: var(--clr-primary-dark);
+}
+
+.profile__name__and__age p {
+  font-size: var(--fs-600);
+}
+
+.profile__stats {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  gap: 2rem;
+}
+
+
+/* Utilities */
+
+/* Media Queries */
+
+@media (min-width: 700px) {
+  body {
+    background-position: bottom -50vh right -5vw, top -50vh left -5vw;
+  }
+}
+
+/* Frontend Mentor Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
